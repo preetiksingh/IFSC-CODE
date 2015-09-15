@@ -1,0 +1,77 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+	table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#topNavBar" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><b><span style="color:white"><span
+                        style="color:#18BC9C; font-size:36;">BANK IFSC CODES</span></b></a>
+            </div>
+            <div id="topNavBar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li class=""><a href="/about">About Us</a></li>
+                    <li class=""><a href="/privacy">Privacy Policy</a></li>
+                    <li class=""><a href="/tos">Terms & Conditions</a></li>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+    <br>
+            <div class="panel panel-default">
+    <div class="panel-heading">Search Zipcode
+    </div>
+    <div class="panel-body">
+               <br>
+              <div class="panel panel-default">
+    <div class="panel-heading">Branches of {{ name }} Found in Following State:</div>
+    <div class="panel-body">
+          <table class="reference">
+        <tbody>
+            <tr>
+                <th>State Name</th>
+
+            </tr>
+
+            {% for presidente in presidentes %}
+            <tr>
+                <td><a href="{{ request.url }}{{presidente[0]}}/">{{presidente[0]}}</a></td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   </body>
+</html>
